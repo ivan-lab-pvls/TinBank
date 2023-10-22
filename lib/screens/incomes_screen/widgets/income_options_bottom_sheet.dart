@@ -26,7 +26,7 @@ class IncomeOptionsBottomSheet extends StatelessWidget {
       children: [
         _Button(
           onTap: onEditTap,
-          title: 'Edit',
+          title: 'Редактировать',
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
@@ -37,7 +37,7 @@ class IncomeOptionsBottomSheet extends StatelessWidget {
         ),
         _Button(
           onTap: onDeleteTap,
-          title: 'Delete',
+          title: 'Удалить',
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 24),
@@ -48,7 +48,7 @@ class IncomeOptionsBottomSheet extends StatelessWidget {
         ),
         _Button(
           onTap: onCancelTap,
-          title: 'Cancel',
+          title: 'Отмена',
         ),
       ],
     );
@@ -69,7 +69,7 @@ class _Button extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        color: CustomTheme.greyColor,
+        color: Color.fromARGB(255, 250, 225, 37),
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(vertical: 24),
         child: Text(

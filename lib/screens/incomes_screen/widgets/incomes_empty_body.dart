@@ -35,13 +35,13 @@ class IncomesEmptyBody extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               Text(
-                'No information on income yet',
+                'Нету информации о доходах',
                 style: context.textTheme.displayMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 12),
               Text(
-                'Click on the "Add income" button',
+                'Нажмите на кнопку "+", чтобы добавить доходы',
                 style: context.textTheme.titleMedium,
                 textAlign: TextAlign.center,
               )

@@ -68,7 +68,7 @@ class MainScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'View all',
+                          'Читать все',
                           style: context.textTheme.titleSmall,
                         ),
                       ],

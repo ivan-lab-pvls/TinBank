@@ -21,11 +21,11 @@ class Income {
 
 enum IncomeSource {
   @JsonValue('personalEncome')
-  personalIncome('assets/income_source/personal_income.png', 'Personal income'),
+  personalIncome('assets/income_source/personal_income.png', 'Личные начисления'),
   @JsonValue('realEstate')
-  realEstate('assets/income_source/real_estate.png', 'Real estate'),
+  realEstate('assets/income_source/real_estate.png', 'Недвижимость'),
   @JsonValue('dividents')
-  dividents('assets/income_source/dividents.png', 'Dividents');
+  dividents('assets/income_source/dividents.png', 'Дивиденды');
 
   const IncomeSource(this.iconPath, this.title);
 

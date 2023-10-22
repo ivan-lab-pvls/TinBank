@@ -31,9 +31,13 @@ class AddIncomeScreen extends StatefulWidget {
 class _AddIncomeScreenState extends State<AddIncomeScreen> {
   final TextEditingController _summController = TextEditingController();
   final TextEditingController _descController = TextEditingController();
+  final TextEditingController d1 = TextEditingController();
+  final TextEditingController d2 = TextEditingController();
 
   final FocusNode _summFocusNode = FocusNode();
   final FocusNode _descFocusNode = FocusNode();
+  final FocusNode _d1 = FocusNode();
+  final FocusNode _d2 = FocusNode();
 
   final ValueNotifier<bool> buttonEnabledNotifier = ValueNotifier(false);
 
@@ -70,7 +74,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomTheme.greyColor,
+      backgroundColor: context.theme.primaryColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -91,7 +95,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
                   Text(
                     'ДОБАВИТЬ ДОХОД',
                     style: context.textTheme.displayMedium
-                        ?.copyWith(color: CustomTheme.whiteColor),
+                        ?.copyWith(color: const Color.fromARGB(255, 0, 0, 0)),
                   ),
                 ],
               ),
@@ -112,6 +116,18 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
                 focusNode: _descFocusNode,
                 hintText: 'Описание',
               ),
+              const SizedBox(height: 20),
+              AddIncomeTextField(
+                controller: d1,
+                focusNode: _d1,
+                hintText: 'Ежемесячные начисления',
+              ),
+              const SizedBox(height: 20),
+              AddIncomeTextField(
+                controller: d2,
+                focusNode: _d2,
+                hintText: 'Процентная ставка',
+              ),
             ],
           ),
         ),
@@ -119,7 +135,7 @@ class _AddIncomeScreenState extends State<AddIncomeScreen> {
       floatingActionButton: AddIncomeButton(
         buttonEnabledNotifier: buttonEnabledNotifier,
         onTap: _onAddIncomeTap,
-        title: widget.income == null ? 'Add income' : 'Edit income',
+        title: widget.income == null ? 'Добавить доход' : 'Редактировать',
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

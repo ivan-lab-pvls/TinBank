@@ -28,22 +28,22 @@ class SettingsScreen extends StatelessWidget {
             const SizedBox(height: 32),
             SettingsButton(
               iconPath: 'assets/privacy_policy.svg',
-              title: 'Privicy policy',
+              title: 'Политика безопасности',
               onTap: () => _onPrivacyPolicyTap(context),
             ),
             SettingsButton(
               iconPath: 'assets/terms_of_use.svg',
-              title: 'Terms of use',
+              title: 'Правила использования',
               onTap: () => _onTermsOfUseTap(context),
             ),
             SettingsButton(
               iconPath: 'assets/privacy_policy.svg',
-              title: 'Support',
+              title: 'Поддержка',
               onTap: () => _onSupportTap(context),
             ),
             SettingsButton(
               iconPath: 'assets/rate_app.svg',
-              title: 'Rate or app',
+              title: 'Оценить нас',
               onTap: () => InAppReview.instance
                   .openStoreListing(appStoreId: '6470149790'),
             ),
@@ -53,14 +53,18 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-
   void _onTermsOfUseTap(BuildContext context) {
-    context.pushNamed(Routes.ll, extra: 'https://docs.google.com/document/d/1tU-7guKiZ-6tWa_NsRLnoXyrs455tl9YFvP6tFpWDbY/edit?usp=sharing');
+    context.pushNamed(Routes.ll,
+        extra:
+            'https://docs.google.com/document/d/1tU-7guKiZ-6tWa_NsRLnoXyrs455tl9YFvP6tFpWDbY/edit?usp=sharing');
   }
 
   void _onPrivacyPolicyTap(BuildContext context) {
-    context.pushNamed(Routes.ll, extra: 'https://docs.google.com/document/d/1i97UTfz-iJVN9jfMunT4hYDbDDaDQfi6IID9yFLjyII/edit?usp=sharing');
+    context.pushNamed(Routes.ll,
+        extra:
+            'https://docs.google.com/document/d/1i97UTfz-iJVN9jfMunT4hYDbDDaDQfi6IID9yFLjyII/edit?usp=sharing');
   }
+
   void _onSupportTap(BuildContext context) {
     context.pushNamed(Routes.ll, extra: 'https://forms.gle/7csP8RmbH8smDfcv5');
   }

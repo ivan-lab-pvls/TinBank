@@ -26,7 +26,7 @@ class AddIncomeTextField extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: CustomTheme.darkGreyColor,
+        color: Color.fromARGB(255, 233, 233, 233),
         borderRadius: BorderRadius.circular(8),
       ),
       child: TextField(
@@ -37,7 +37,7 @@ class AddIncomeTextField extends StatelessWidget {
         keyboardType: keyboardType,
         inputFormatters: inputFormatters,
         style: context.textTheme.titleLarge?.copyWith(
-          color: CustomTheme.whiteColor,
+          color: const Color.fromARGB(255, 0, 0, 0),
         ),
         decoration: InputDecoration(
           hintText: hintText,

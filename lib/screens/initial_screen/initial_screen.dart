@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+// import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:ti_bank/constants.dart';
 import 'package:ti_bank/routes.dart';
@@ -174,14 +174,14 @@ class _TPScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-          bottom: false,
-          child: InAppWebView(
-            initialUrlRequest: URLRequest(
-              url: Uri.parse(s),
-            ),
-          ),
-        ),
+        // body: SafeArea(
+        //   bottom: false,
+        //   child: InAppWebView(
+        //     initialUrlRequest: URLRequest(
+        //       url: Uri.parse(s),
+        //     ),
+        //   ),
+        // ),
         );
   }
 }
